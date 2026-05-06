@@ -1,0 +1,304 @@
+/* Основні налаштування */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+    scroll-behavior: smooth;
+}
+
+/* Навігація */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #ff5722;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff5722;
+}
+
+/* Hero Section */
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 40px auto;
+    transition: 0.3s;
+}
+
+.mission:hover {
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.5);
+    border: 2px solid #ff5722;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ff5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Секції */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+.dark-bg {
+    background: #252525;
+}
+
+
+/* Карти та Команда */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.card {
+    background: #333;
+    padding: 30px;
+    border-radius: 10px;
+    border-bottom: 4px solid #ff5722;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-bottom: 4px solid #ff7043;
+    box-shadow: 4px 6px 16px rgba(236, 236, 236, 0.1);
+    transform: scale(1.03);
+}
+
+/* Галерея та Команда */
+.img-placeholder1{
+    background-image: url('https://mors.in.ua/uploads/posts/2017-04/1493284930_1493225419190817276.jpg');
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 10px;
+    flex: 1;
+    transition: 0.3s;
+}
+
+.img-placeholder2{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/PIA16239_High-Resolution_Self-Portrait_by_Curiosity_Rover_Arm_Camera_square.jpg/330px-PIA16239_High-Resolution_Self-Portrait_by_Curiosity_Rover_Arm_Camera_square.jpg');
+    background-size: cover;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 10px;
+    flex: 1;
+    transition: 0.3s;
+}
+
+.img-placeholder3{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_ywSdWNSgkoYWrNTwIlLMGS-FANaNfwTNKw&s');
+    background-size: cover;
+    background-position: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-repeat: no-repeat;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 10px;
+    flex: 1;
+    transition: 0.3s;
+}
+
+.img-placeholder1:hover, .img-placeholder2:hover, .img-placeholder3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.5);
+    border: 2px solid #ff5722;
+}
+
+.gallery-row {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.team-grid {
+    display: grid;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 50px;
+    margin-top:30px;
+}
+
+.avatar1 {
+    background-image: url('https://img.freepik.com/premium-photo/handsome-young-business-man-holding-document-folder_220507-699.jpg');
+    background-size: 200%;
+    background-position: 45% 0%;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.avatar2 {
+    background-image: url('https://i.pinimg.com/736x/cc/9b/5d/cc9b5d5ee313519031b77405cf9853ac.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: 55% 0%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.avatar3 {
+    background-image: url('https://knygaca.s3.amazonaws.com/knygaca-prod/media/personalities/img/valerii-markus.jpg');
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.avatar4 {
+    background-image: url('https://static.yakaboo.ua/media/entity/author/s/a/sarah_jio_01.jpg');
+    background-repeat: no-repeat;
+    background-position: 30% 22%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.avatar5 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTAVVhetjC4tFGRw6ZWSduPOsrGOmOpbl2wQ&s');
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: 90% 10%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.avatar6 {
+    background-image: url('https://resizing.flixster.com/1MVpyyDt3oPYA74UNey_T6iqVq8=/218x280/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/1440646_v9_aa.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 0%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.avatar1, .avatar2, .avatar3, .avatar4, .avatar5, .avatar6 {
+    transition: 0.3s;
+}
+
+.avatar1:hover, .avatar2:hover, .avatar3:hover, .avatar4:hover, .avatar5:hover, .avatar6:hover {
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.5);
+    border: 2px solid #ff5722;
+}
+
+.facts-section {
+    background: #333;
+    list-style:inside;
+    padding: 0;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px auto;
+    transition: 0.3s;
+}
+
+.facts-section:hover {
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.5);
+    border: 2px solid #ff5722;
+}
+
+footer { 
+    padding: 40px;
+    background: #000;
+    font-size: 14px;
+    opacity: 0.7;
+}
