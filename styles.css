@@ -3,9 +3,22 @@ body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #1a1a1a;
+    background-color: #000000;
     color: #f4f4f4;
     scroll-behavior: smooth;
+}
+
+h2 {
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ddd;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Навігація */
@@ -133,7 +146,7 @@ section {
 
 /* Галерея та Команда */
 .img-placeholder1{
-    background-image: url('https://mors.in.ua/uploads/posts/2017-04/1493284930_1493225419190817276.jpg');
+    background-image: url('https://cn15.nevsedoma.com.ua/photo/10/1045/251_files/3-4.jpg');
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     background-size: cover;
@@ -167,7 +180,7 @@ section {
 }
 
 .img-placeholder3{
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_ywSdWNSgkoYWrNTwIlLMGS-FANaNfwTNKw&s');
+    background-image: url('https://faktypro.com.ua/uploads/img-2/24-cikavih-faktiv-pro-mars.jpg');
     background-size: cover;
     background-position: center;
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -198,7 +211,6 @@ section {
 .team-grid {
     display: grid;
     justify-content: center;
-    flex-wrap: wrap;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 50px;
     margin-top:30px;
@@ -281,6 +293,21 @@ section {
     border: 2px solid #ff5722;
 }
 
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff5722;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(255,87,34,0.5);
+    z-index: 2000;
+}
+
 .facts-section {
     background: #333;
     list-style:inside;
@@ -288,6 +315,7 @@ section {
     border-radius: 10px;
     padding: 10px 20px;
     margin: 10px auto;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     transition: 0.3s;
 }
 
@@ -298,7 +326,7 @@ section {
 
 footer { 
     padding: 40px;
-    background: #000;
+    background: #333;
     font-size: 14px;
     opacity: 0.7;
 }
