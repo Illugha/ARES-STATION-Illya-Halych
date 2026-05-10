@@ -1,536 +1,186 @@
-/* Змінні кольорів */
-:root {
-    --mars-orange: #ff5722;       /* Основний помаранчевий */
-    --mars-dark-orange: #e64a19;  /* Глибокий помаранчевий для ховерів */
-    --neon-blue: #00e5ff;         /* Колір "високих технологій" та кисню */
-    --deep-purple: #311b92;       /* Колір космосу та тіней */
-    --surface-gray: #1e1e1e;      /* Колір панелей бази */
-    --text-main: #f4f4f4;         /* Основний колір тексту */
-    --text-muted: #b0bec5;        /* Допоміжний колір тексту */
-    --steel-gray: #546e7a;        /* Колір сталі */
-}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARES STATION | Життя на Марсі</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-/* Основні налаштування */
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #000000;
-    color: var(--text-main);
-    scroll-behavior: smooth;
-}
+    <!-- Навігація -->
+    <nav>
+        <div class="logo">ARES <span>STATION</span></div>
+        <ul>
+            <li><a href="#mission">Місія</a></li>
+            <li><a href="#base">База</a></li>
+            <li><a href="#quiz">Квіз</a></li>
+            <li><a href="#team">Команда</a></li>
+            <li><a href="#diagram">Діаграма</a></li>
+            <li><a href="#facts">Факти</a></li>
+        </ul>
+    </nav>
 
-/* Заголовки */
-h2 {
-    font-weight: 900;
-    margin-bottom: 20px;
-    font-family:'Courier New', Courier, monospace;
-}
+    <!-- Головний екран -->
+    <header>
+        <div class="hero-content">
+            <h1>МАРС — НАШ НОВИЙ ДІМ</h1>
+            <p>Стань частиною першої міжпланетної цивілізації.</p>
+            <a href="#base" class="btn">Дослідити базу</a>
+        </div>
+    </header>
 
-/* Параграфи */
-p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: var(--text-muted);
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
+    <!-- Блок Місія -->
+    <section id="mission">
+        <div class="mission">
+            <h2>Наша Місія</h2>
+            <div class="container">
+                <p>Проєкт ARES STATION — це не просто виживання. Це створення автономної екосистеми, де наука, мистецтво та технології працюють в унісоні для розширення меж людства.</p>
+            </div>
+        </div>
+    </section>
 
-/* Навігація */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background: rgba(0, 0, 0, 0.8);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+    <!-- Блок База та Технології -->
+    <section id="base">
+        <h2>Життєзабезпечення</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Біо-Куполи</h3>
+                <p>Вертикальні ферми, що забезпечують колонію киснем та свіжою їжею за допомогою гідропоніки.</p>
+            </div>
+            <div class="card">
+                <h3>Енергія</h3>
+                <p>Мережа сонячних панелей з покриттям, що відштовхує пил, та підземні термальні реактори.</p>
+            </div>
+            <div class="card">
+                <h3>Захист</h3>
+                <p>3D-друковані стіни, що захищають від радіації та екстремальних температур.</p>
+            </div>
+        </div>
+    </section>
 
-/* Логотип */
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
+    <!-- Галерея -->
+    <section id="gallery">
+        <h2>Краєвиди майбутнього</h2>
+        <div class="gallery-row">
+            <div class="img-placeholder1" alt="Вигляд на Олімп">Вигляд на Олімп</div>
+            <div class="img-placeholder2" alt="Лабораторія">Лабораторія</div>
+            <div class="img-placeholder3" alt="Захід Сонця">Захід Сонця</div>
+        </div>
+    </section>
 
-/* Колір підсвічування логотипу */
-.logo span {
-    color: #ff5722;
-}
+    <section id="diagram">
+        <h2>Стан середовища ARES-1</h2>
+        <div class="chart-container">
+            <div class="pie-chart">
+                <div class="chart-label">
+                    <span>Кисень 21%</span>
+                    <span>Азот 78%</span>
+                    <span>Аргон 1%</span>
+                </div>
+            </div>
+            <div class="chart-info">
+                <h3>Атмосферний контроль</h3>
+                <p>Система підтримує ідеальний баланс газів для життєдіяльності без скафандрів.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="quiz" class="quiz-section">
+        <h1>Перевір свої знання про Марс</h1>
+        <h2>Натисніть на запитання, щоб побачити відповідь.</h2>
+        
+        <div class="quiz-accordion">
+            <!-- Питання 1 -->
+            <details>
+                <summary>Яка тривалість доби на Марсі?</summary>
+                <div class="answer-content">
+                    <p>Доба на Марсі триває <strong>24 години 39 хвилин</strong>. Це лише трохи довше, ніж на Землі, що робить адаптацію людей легшою.</p>
+                </div>
+            </details>
 
-/* Навігаційні посилання */
-nav ul {
-    display: flex;
-    list-style: none;
-}
+            <!-- Питання 2 -->
+            <details>
+                <summary>Чому небо на Марсі під час заходу Сонця синє?</summary>
+                <div class="answer-content">
+                    <p>Через дрібний пил в атмосфері, який розсіює синє світло ефективніше під час заходу Сонця. Вдень же небо має рожево-коричневий відтінок.</p>
+                </div>
+            </details>
 
-/* Стиль для посилань у навігації */
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    transition: 0.3s;
-}
+            <!-- Питання 3 -->
+            <details>
+                <summary>Яка гравітація чекає на колоністів?</summary>
+                <div class="answer-content">
+                    <p>Гравітація становить <strong>38% від земної</strong>. Це означає, що ви зможете підстрибнути майже втричі вище, ніж удома!</p>
+                </div>
+            </details>
+        </div>
+    </section>
 
-/* Ефект при наведенні на посилання */
-nav ul li a:hover {
-    color: #ff5722;
-}
+    <!-- Команда -->
+    <section id="team">
+        <h2>Творці Місії</h2>
+        <div class="team-grid">
+            <div class="member">
+                <div class="avatar1"></div>
+                <h4>Адріан Ворд</h4>
+                <p> Інженер</p>
+            </div>
+            <div class="member">
+                <div class="avatar2"></div>
+                <h4>Олена Маркович</h4>
+                <p>Біолог</p>
+            </div>
+            <div class="member">
+                <div class="avatar3"></div>
+                <h4>Маркус Торн</h4>
+                <p>Геолог-планетолог</p>
+            </div>
+            <div class="member">
+                <div class="avatar4"></div>
+                <h4>Сара Ель-Амін</h4>
+                <p>Інженер систем регенерації</p>
+            </div>
+            <div class="member">
+                <div class="avatar5"></div>
+                <h4>Віктор Громов</h4>
+                <p>Оператор автономних дронів</p>
+            </div>
+            <div class="member">
+                <div class="avatar6"></div>
+                <h4>Наомі Сато</h4>
+                <p>Астробіолог-селекціонер</p>
+            </div>
+        </div>
+    </section>
 
-/* Hero секція */
-header {
-    height: 110vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=1500&q=80');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
+    <!-- Плаваюча кнопка -->
+    <button class="floating-btn" onclick="window.location.href='https://www.nasa.gov/mission_pages/mars/main/index.html'">Дізнатись більше</button>
 
-/* Вміст Hero секції */
-.hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 10px;
-}
+    <!-- Факти -->
+    <section id="facts">
+        <div class="facts-section">
+            <h2>Цікаві факти</h2>
+            <ul>
+                <li>Гравітація на Марсі складає лише 38% від земної.</li>
+                <li>Доба на Марсі (Сол) триває 24 години 39 хвилин.</li>
+                <li>Відстань до Землі — близько 225 мільйонів кілометрів.</li>
+            </ul>
+        </div>
+    </section>
 
-/* Опис Hero секції */
-.hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: var(--text-muted);
-}
+    <!-- Фінальна анімація -->
+    <section id="final-animation">
+        <div class="gif-container">
+            <img src="https://cdn.pixabay.com/animation/2024/06/19/22/57/22-57-25-143_512.gif" alt="Mars Animation">
+            <p>До зустрічі на червоній планеті!</p>
+        </div>
+    </section>
 
-/* Секція місії */
-.mission {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--text-main);
-    background-color: #333;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 40px auto;
-    transition: 0.3s;
-}
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2026 Проєкт "ARES STATION". Автор: Галич Ілля</p>
+    </footer>
 
-/* Ефект при наведенні на секцію місії */
-.mission:hover {
-    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.5);
-    border: 2px solid var(--mars-orange);
-}
-
-/* Кнопка */
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background: var(--mars-orange);
-    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: linear-gradient(45deg, #ff7043, var(--mars-orange));
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 87, 34, 0.6);
-}
-
-/* Секції */
-section {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-/* Темний фон */
-.dark-bg {
-    background: #252525;
-}
-
-
-/* Карти та Команда */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 40px auto;
-}
-
-/* Карточки */
-.card {
-    background: #333;
-    padding: 30px;
-    border-radius: 10px;
-    border-bottom: 4px solid #ff5722;
-    transition: 0.3s;
-}
-
-/* Ефект при наведенні на карточку */
-.card:hover {
-    border-bottom: 4px solid var(--mars-orange);
-    box-shadow: 4px 6px 16px rgba(236, 236, 236, 0.1);
-    transform: scale(1.03);
-}
-
-/* Галерея та Команда */
-.img-placeholder1{
-    background-image: url('https://cn15.nevsedoma.com.ua/photo/10/1045/251_files/3-4.jpg');
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    margin: 10px;
-    flex: 1;
-    transition: 0.3s;
-}
-
-.img-placeholder2{
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/PIA16239_High-Resolution_Self-Portrait_by_Curiosity_Rover_Arm_Camera_square.jpg/330px-PIA16239_High-Resolution_Self-Portrait_by_Curiosity_Rover_Arm_Camera_square.jpg');
-    background-size: cover;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    margin: 10px;
-    flex: 1;
-    transition: 0.3s;
-}
-
-.img-placeholder3{
-    background-image: url('https://faktypro.com.ua/uploads/img-2/24-cikavih-faktiv-pro-mars.jpg');
-    background-size: cover;
-    background-position: center;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-    background-repeat: no-repeat;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    margin: 10px;
-    flex: 1;
-    transition: 0.3s;
-}
-
-/* Ефект при наведенні на плейсхолдери */
-.img-placeholder1:hover, .img-placeholder2:hover, .img-placeholder3:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.5);
-    border: 2px solid var(--mars-orange);
-}
-
-/* Ряд галереї */
-.gallery-row {
-    display: flex;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Сітка команди */
-.team-grid {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 50px;
-    margin-top:30px;
-}
-/* Аватари */
-.avatar1 {
-    background-image: url('https://img.freepik.com/premium-photo/handsome-young-business-man-holding-document-folder_220507-699.jpg');
-    background-size: 200%;
-    background-position: 45% 0%;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: auto;
-}
-
-.avatar2 {
-    background-image: url('https://i.pinimg.com/736x/cc/9b/5d/cc9b5d5ee313519031b77405cf9853ac.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 150%;
-    background-position: 55% 0%;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: auto;
-}
-
-.avatar3 {
-    background-image: url('https://knygaca.s3.amazonaws.com/knygaca-prod/media/personalities/img/valerii-markus.jpg');
-    background-size: 120%;
-    background-repeat: no-repeat;
-    background-position: 100% 0%;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: auto;
-}
-
-.avatar4 {
-    background-image: url('https://static.yakaboo.ua/media/entity/author/s/a/sarah_jio_01.jpg');
-    background-repeat: no-repeat;
-    background-position: 30% 22%;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: auto;
-}
-
-.avatar5 {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTAVVhetjC4tFGRw6ZWSduPOsrGOmOpbl2wQ&s');
-    background-size: 120%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position: 90% 10%;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: auto;
-}
-
-.avatar6 {
-    background-image: url('https://resizing.flixster.com/1MVpyyDt3oPYA74UNey_T6iqVq8=/218x280/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/1440646_v9_aa.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: 0%;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: auto;
-}
-
-/* Ефект при наведенні на аватари */
-.avatar1, .avatar2, .avatar3, .avatar4, .avatar5, .avatar6 {
-    transition: 0.3s;
-}
-
-/* Ефект при наведенні на аватари */
-.avatar1:hover, .avatar2:hover, .avatar3:hover, .avatar4:hover, .avatar5:hover, .avatar6:hover {
-    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.5);
-    border: 2px solid var(--mars-orange);
-}
-
-/* Плаваюча кнопка */
-.floating-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: var(--neon-blue); /* Робимо плаваючу кнопку блакитною для контрасту */
-    box-shadow: 0 0 20px rgba(0, 229, 255, 0.8);
-    color: #000;
-    font-weight: bold;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: flex;
-    color: rgb(255, 255, 255);
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    text-decoration: none;
-    z-index: 2000;
-}
-
-/* Секція фактів */
-.facts-section {
-    background: #333;
-    list-style:inside;
-    padding: 0;
-    border-radius: 10px;
-    padding: 10px 20px;
-    margin: 10px auto;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    transition: 0.3s;
-}
-
-/* Ефект при наведенні на секцію фактів */
-.facts-section:hover {
-    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.5);
-    border: 2px solid var(--mars-orange);
-}
-
-/* Футер */
-footer { 
-    padding: 40px;
-    background: #333;
-    font-size: 14px;
-    opacity: 0.7;
-}
-
-/* Контейнер для центрування */
-.chart-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    padding: 40px;
-    background: var(--surface-gray);
-    border-radius: 15px;
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-/* Сама кругова діаграма */
-.pie-chart {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    /* Створюємо сектори за допомогою градієнта */
-    background: conic-gradient(
-        var(--neon-blue) 0% 21%,    /* Кисень - Блакитний (логічно) */
-        var(--steel-gray) 21% 99%,            /* Азот - Сталевий */
-        var(--mars-orange) 99% 100% /* Аргон/Інше - Помаранчевий */
-    );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    box-shadow: 0 0 30px rgba(255, 87, 34, 0.2);
-    transition: 0.3s;
-}
-
-/* Ефект "бублика" (порожнеча всередині) */
-.pie-chart::after {
-    content: "";
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    background: var(--surface-gray);
-    border-radius: 50%;
-}
-
-/* Текст всередині або навколо */
-.chart-label {
-    z-index: 10;
-    text-align: center;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 0.9rem;
-}
-
-.chart-label span {
-    display: block;
-    font-weight: bold;
-}
-
-.pie-chart:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 40px rgba(255, 87, 34, 0.4);
-    filter: brightness(1.1);
-}
-
-.chart-info {
-    max-width: 300px;
-    text-align: left;
-}
-
-.chart-info h3 {
-    color: var(--mars-orange);
-    margin-top: 0;
-}
-
-details {
-    background: var(--surface-gray);
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #444;
-    overflow: hidden;
-    transition: 0.3s;
-}
-
-details[open] {
-    border-color: var(--mars-orange);
-    box-shadow: 0 0 15px rgba(255, 87, 34, 0.2);
-}
-
-details[open] summary {
-    color: var(--neon-blue); /* Відкрите питання світиться блакитним */
-}
-
-/* Заголовок питання */
-summary {
-    padding: 20px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    list-style: none; /* Прибираємо стандартну стрілку в деяких браузерах */
-    position: relative;
-    transition: color 0.3s;
-}
-
-summary:hover {
-    color: var(--mars-orange);
-}
-
-/* Іконка "+" */
-summary::after {
-    content: '+';
-    position: absolute;
-    right: 20px;
-    color: var(--mars-orange);
-    font-size: 1.5rem;
-}
-
-/* Зміна на "−" при відкритті */
-details[open] summary::after {
-    content: '−';
-}
-
-/* Блок з відповіддю */
-.answer-content {
-    padding: 0 20px 20px 20px;
-    color: #ddd;
-    border-top: 1px solid #444;
-    animation: fadeIn 0.5s ease; /* Плавна поява тексту */
-}
-
-/* Логіка анімації */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-#final-animation {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.gif-container img {
-    width: 100%;
-    max-width: 400px; /* Обмежуємо розмір */
-    border-radius: 50%; /* Робимо круглу форму, якщо це планета */
-    filter: drop-shadow(0 0 30px var(--mars-orange)); /* Сяйво навколо */
-    margin-bottom: 20px;
-}
-
-.gif-container p {
-    font-family: 'Orbitron', sans-serif;
-    color: var(--mars-orange);
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
+</body>
+</html>
